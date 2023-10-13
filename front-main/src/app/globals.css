@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* fonts */
+@layer utilities {
+  .regular-10 {
+    @apply font-inter text-[10px] font-normal;
+  }
+
+  .regular-12 {
+    @apply font-inter text-xs font-normal;
+  }
+
+  .regular-14 {
+    @apply font-inter text-sm font-normal;
+  }
+
+  .regular-16 {
+    @apply font-inter text-md font-normal;
+  }
+
+  .regular-18 {
+    @apply font-inter text-lg font-normal;
+  }
+
+  .regular-20 {
+    @apply font-inter text-xl font-normal;
+  }
+
+  .regular-24 {
+    @apply font-inter text-2xl font-normal;
+  }
+
+  .regular-30 {
+    @apply font-inter text-3xl font-normal;
+  }
+
+  .regular-36 {
+    @apply font-inter text-4xl font-normal;
+  }
+}
